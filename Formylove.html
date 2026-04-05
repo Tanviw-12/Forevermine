@@ -216,12 +216,14 @@ const voice = document.getElementById("voice");
 
 /* START */
 function start(){
+  let bg = document.getElementById("bgm");
+  let hb = document.getElementById("heartbeat");
 
-  bgm.volume = 0.5;
-  heartbeat.volume = 0.4;
+  bg.play().catch(()=>{});
+  hb.play().catch(()=>{});
 
-  bgm.play().catch(()=>{});
-
+  next(1);
+}
   setTimeout(()=>{
     heartbeat.play().catch(()=>{});
   },1000);
