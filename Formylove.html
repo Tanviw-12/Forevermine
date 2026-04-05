@@ -216,11 +216,11 @@ const voice = document.getElementById("voice");
 
 /* START */
 function start(){
-  let bg = document.getElementById("bgm");
-  let hb = document.getElementById("heartbeat");
 
-  bg.play().catch(()=>{});
-  hb.play().catch(()=>{});
+  bgm.volume = 0.5;
+  heartbeat.volume = 0.4;
+
+  bgm.play().catch(()=>{});
 
   next(1);
 }
